@@ -18,10 +18,41 @@ public class GradesApplication {
         anila.addGrade(91);
         anila.addGrade(93);
         anila.recordAttendance("2018-09-13", "a");
-
-
-
-
+        anila.recordAttendance("2018-09-14", "p");
+        anila.recordAttendance("2018-09-15", "p");
+        anila.recordAttendance("2018-09-16", "p");
+        andira.addGrade(80);
+        andira.addGrade(83);
+        andira.addGrade(87);
+        andira.addGrade(90);
+        andira.recordAttendance("2018-09-13", "a");
+        andira.recordAttendance("2018-09-14", "a");
+        andira.recordAttendance("2018-09-15", "p");
+        andira.recordAttendance("2018-09-16", "p");
+        mahira.addGrade(95);
+        mahira.addGrade(93);
+        mahira.addGrade(97);
+        mahira.addGrade(100);
+        mahira.recordAttendance("2018-09-13", "p");
+        mahira.recordAttendance("2018-09-14", "p");
+        mahira.recordAttendance("2018-09-15", "p");
+        mahira.recordAttendance("2018-09-16", "p");
+        vajra.addGrade(75);
+        vajra.addGrade(90);
+        vajra.addGrade(77);
+        vajra.addGrade(88);
+        vajra.recordAttendance("2018-09-13", "a");
+        vajra.recordAttendance("2018-09-14", "p");
+        vajra.recordAttendance("2018-09-15", "a");
+        vajra.recordAttendance("2018-09-16", "p");
+        kumbhira.addGrade(89);
+        kumbhira.addGrade(88);
+        kumbhira.addGrade(87);
+        kumbhira.addGrade(90);
+        kumbhira.recordAttendance("2018-09-13", "p");
+        kumbhira.recordAttendance("2018-09-14", "p");
+        kumbhira.recordAttendance("2018-09-15", "a");
+        kumbhira.recordAttendance("2018-09-16", "p");
         students.put("anilaSheep", anila);
         students.put("andiraMonkey", andira);
         students.put("mahiraRooster", mahira);
@@ -55,21 +86,21 @@ public class GradesApplication {
                     if(students.get(user) == null){
                         System.out.println("Username not found.");
                     } else {
-                        System.out.println("Name " + students.get(user).getName());
-                        System.out.println("Username " + user);
+                        System.out.println("Name: " + students.get(user).getName());
+                        System.out.println("Username: " + user);
                         System.out.print("Grades: ");
                         students.get(user).getGrades();
-                        System.out.println("Average: " + students.get(user).getGradeAverage());
+                        System.out.println("\nAverage: " + students.get(user).getGradeAverage());
                     }
                     break;
                 case 2:
                     System.out.println("All students: ");
                     for(String name : students.keySet()){
-                        System.out.println("Name " + students.get(name).getName());
-                        System.out.println("Username " + name);
+                        System.out.println("\nName: " + students.get(name).getName());
+                        System.out.println("Username: " + name);
                         System.out.print("Grades: ");
                         students.get(name).getGrades();
-                        System.out.println("Average: " + students.get(name).getGradeAverage());
+                        System.out.println("\nAverage: " + students.get(name).getGradeAverage());
                     }
                     break;
                 case 3:
@@ -78,8 +109,8 @@ public class GradesApplication {
                     if(students.get(user) == null){
                         System.out.println("Username not found.");
                     } else {
-                        System.out.println("Name " + students.get(user).getName());
-                        System.out.println("Username " + user);
+                        System.out.println("Name: " + students.get(user).getName());
+                        System.out.println("Username: " + user);
                         System.out.print("Attendance: ");
                         System.out.println(students.get(user).attendPercent() + "%");
                         System.out.println("Dates: ");
@@ -89,8 +120,8 @@ public class GradesApplication {
                 case 4:
                     System.out.println("All students: ");
                     for(String name : students.keySet()){
-                        System.out.println("Name " + students.get(name).getName());
-                        System.out.println("Attendance: ");
+                        System.out.println("\nName: " + students.get(name).getName());
+                        System.out.print("Attendance: ");
                         System.out.println(students.get(name).attendPercent() + "%");
                         System.out.println("Dates: ");
                         students.get(name).getDates();
